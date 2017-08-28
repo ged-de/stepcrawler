@@ -1,0 +1,10 @@
+{
+  "article" : {
+    "base": "ol.list-group.list-group--oddeven li",
+    "title": "h5.jobitem__title span",
+    "company": "div.jobitem__company span",
+    "location": "p.jobitem__location span[itemprop=addressLocality]",
+    "date": "p.jobitem__date time",
+    "url": ".jobitem__header a"
+  }
+}

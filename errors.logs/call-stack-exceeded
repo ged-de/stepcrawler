@@ -1,0 +1,24 @@
+I found  15586  jobs
+We have  241  jobs in db
+/home/ged/Projects/simplecrawler-node-2/node_modules/mongoose/lib/document.js:953
+  var pieces = path.split('.');
+                    ^
+
+RangeError: Maximum call stack size exceeded
+    at String.split (native)
+    at model.Document.get (/home/ged/Projects/simplecrawler-node-2/node_modules/mongoose/lib/document.js:953:21)
+    at model.get (/home/ged/Projects/simplecrawler-node-2/node_modules/mongoose/lib/document.js:1976:25)
+    at /home/ged/Projects/simplecrawler-node-2/app.js:78:16
+    at Array.filter (native)
+    at checkFoundedJobs (/home/ged/Projects/simplecrawler-node-2/app.js:76:21)
+    at checkFoundedJobs (/home/ged/Projects/simplecrawler-node-2/app.js:83:3)
+    at checkFoundedJobs (/home/ged/Projects/simplecrawler-node-2/app.js:83:3)
+    at checkFoundedJobs (/home/ged/Projects/simplecrawler-node-2/app.js:83:3)
+    at checkFoundedJobs (/home/ged/Projects/simplecrawler-node-2/app.js:83:3)
+    at checkFoundedJobs (/home/ged/Projects/simplecrawler-node-2/app.js:83:3)
+    at checkFoundedJobs (/home/ged/Projects/simplecrawler-node-2/app.js:83:3)
+    at checkFoundedJobs (/home/ged/Projects/simplecrawler-node-2/app.js:83:3)
+    at checkFoundedJobs (/home/ged/Projects/simplecrawler-node-2/app.js:83:3)
+    at checkFoundedJobs (/home/ged/Projects/simplecrawler-node-2/app.js:83:3)
+    at checkFoundedJobs (/home/ged/Projects/simplecrawler-node-2/app.js:83:3)
+

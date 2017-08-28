@@ -1,0 +1,10 @@
+{
+  "article" : {
+    "base": "div.job-elements-list div.job-element-row article",
+    "title": "h2job-element__body__title",
+    "company": "div.job-element__body__company span",
+    "location": "li.job-element__body__location span[itemprop=addressLocality]",
+    "date": "li.job-element__date time",
+    "url": "a.job-element__url"
+  }
+}

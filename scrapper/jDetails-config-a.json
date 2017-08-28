@@ -1,0 +1,8 @@
+{
+  "article" : {
+    "basedetails": "iframe#html-listing",
+    "jobtask": "div#job-tasks",
+    "jobreq": "div#job-requim",
+    "companyoffers": "div#company-weoffer"
+  }
+}

@@ -1,0 +1,54 @@
+fetchcomplete
+queueadd fired: { host: 'www.stepstone.de',
+  path: '/5/resultlistpage?fu=1000000&li=100&of=15600&suid=f1647265-5722-457f-856c-8f03961cd284',
+  port: '',
+  protocol: 'https',
+  uriPath: '/5/resultlistpage',
+  url: 'https://www.stepstone.de/5/resultlistpage?fu=1000000&li=100&of=15600&suid=f1647265-5722-457f-856c-8f03961cd284',
+  depth: 157,
+  referrer: 'https://www.stepstone.de/5/resultlistpage?fu=1000000&li=100&of=15500&suid=f1647265-5722-457f-856c-8f03961cd284',
+  fetched: false,
+  status: 'queued',
+  stateData: {},
+  id: 156 }
+fetchcomplete
+I found  15590  jobs
+We have  15678  jobs in db
+
+<--- Last few GCs --->
+
+ 1772415 ms: Mark-sweep 1249.6 (1440.0) -> 1249.6 (1440.0) MB, 601.9 / 0.0 ms [allocation failure] [scavenge might not succeed].
+ 1772994 ms: Mark-sweep 1249.6 (1440.0) -> 1249.6 (1440.0) MB, 579.2 / 0.0 ms [allocation failure] [scavenge might not succeed].
+ 1773579 ms: Mark-sweep 1249.6 (1440.0) -> 1255.8 (1424.0) MB, 584.1 / 0.0 ms [last resort gc].
+ 1774166 ms: Mark-sweep 1255.8 (1424.0) -> 1262.0 (1424.0) MB, 587.5 / 0.0 ms [last resort gc].
+
+
+<--- JS stacktrace --->
+
+==== JS stack trace =========================================
+
+Security context: 0x20fed013fa99 <JS Object>
+    1: defineProperty(aka defineProperty) [native v8natives.js:~573] [pc=0x1fc45a50963c] (this=0x20fed0104241 <undefined>,D=0x16f2e4bf8879 <JS Array[11176]>,R=11176,v=0x16f2e4bf8899 <an Object with map 0x2cfb77635481>)
+    2: DefineIndexedProperty(aka DefineIndexedProperty) [native array.js:~48] [pc=0x1fc45a3260be] (this=0x20fed0104241 <undefined>,w=0x16f2e4bf8879 <JS Array[11176]>,z=11176,A=0x...
+
+FATAL ERROR: CALL_AND_RETRY_LAST Allocation failed - JavaScript heap out of memory
+ 1: node::Abort() [nodejs]
+ 2: 0x10d3f9c [nodejs]
+ 3: v8::Utils::ReportApiFailure(char const*, char const*) [nodejs]
+ 4: v8::internal::V8::FatalProcessOutOfMemory(char const*, bool) [nodejs]
+ 5: v8::internal::Factory::NewUninitializedFixedArray(int) [nodejs]
+ 6: 0xc4aa17 [nodejs]
+ 7: 0xc4ab7d [nodejs]
+ 8: 0xc4aca5 [nodejs]
+ 9: v8::internal::JSObject::AddDataElement(v8::internal::Handle<v8::internal::JSObject>, unsigned int, v8::internal::Handle<v8::internal::Object>, v8::internal::PropertyAttributes, v8::internal::Object::ShouldThrow) [nodejs]
+10: v8::internal::Object::AddDataProperty(v8::internal::LookupIterator*, v8::internal::Handle<v8::internal::Object>, v8::internal::PropertyAttributes, v8::internal::Object::ShouldThrow, v8::internal::Object::StoreFromKeyed) [nodejs]
+11: v8::internal::JSObject::DefineOwnPropertyIgnoreAttributes(v8::internal::LookupIterator*, v8::internal::Handle<v8::internal::Object>, v8::internal::PropertyAttributes, v8::internal::Object::ShouldThrow, v8::internal::JSObject::AccessorInfoHandling) [nodejs]
+12: v8::internal::JSReceiver::ValidateAndApplyPropertyDescriptor(v8::internal::Isolate*, v8::internal::LookupIterator*, bool, v8::internal::PropertyDescriptor*, v8::internal::PropertyDescriptor*, v8::internal::Object::ShouldThrow, v8::internal::Handle<v8::internal::Name>) [nodejs]
+13: v8::internal::JSReceiver::OrdinaryDefineOwnProperty(v8::internal::Isolate*, v8::internal::Handle<v8::internal::JSObject>, v8::internal::Handle<v8::internal::Object>, v8::internal::PropertyDescriptor*, v8::internal::Object::ShouldThrow) [nodejs]
+14: v8::internal::JSArray::DefineOwnProperty(v8::internal::Isolate*, v8::internal::Handle<v8::internal::JSArray>, v8::internal::Handle<v8::internal::Object>, v8::internal::PropertyDescriptor*, v8::internal::Object::ShouldThrow) [nodejs]
+15: v8::internal::JSReceiver::DefineOwnProperty(v8::internal::Isolate*, v8::internal::Handle<v8::internal::JSReceiver>, v8::internal::Handle<v8::internal::Object>, v8::internal::PropertyDescriptor*, v8::internal::Object::ShouldThrow) [nodejs]
+16: v8::internal::JSReceiver::DefineProperty(v8::internal::Isolate*, v8::internal::Handle<v8::internal::Object>, v8::internal::Handle<v8::internal::Object>, v8::internal::Handle<v8::internal::Object>) [nodejs]
+17: v8::internal::Runtime_ObjectDefineProperty(int, v8::internal::Object**, v8::internal::Isolate*) [nodejs]
+18: 0x1fc459b060c7
+Aborted
+
