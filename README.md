@@ -1,4 +1,4 @@
-# stepcrawler
+# StepStone Crawler for IT Jobs!
 
 Just for fun project to crawl StepStone to fetch IT jobs.
 - crawler done
